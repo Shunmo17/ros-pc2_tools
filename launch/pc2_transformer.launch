@@ -1,0 +1,15 @@
+<launch>
+	<!-- parameters -->
+  <arg name="ns" />
+	<arg name="input_pc2_topic" />
+	<arg name="output_pc2_topic" />
+  <arg name="new_frame_id" />
+
+	<!-- pcd transformer -->
+  <node pkg="pc2_tools" type="pc2_transformer" name="pc2_transformer_$(arg ns)" output="screen">
+    <param name="input_pc2_topic"       value="$(arg input_pc2_topic)" />
+    <param name="output_pc2_topic"      value="$(arg output_pc2_topic)" />
+    <param name="new_frame_id"          value="$(arg new_frame_id)" />
+  </node>
+
+</launch>

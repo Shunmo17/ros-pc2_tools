@@ -1,0 +1,22 @@
+	
+<launch>
+    <arg name="lrs_pc2_topic" />
+    <arg name="save_path" />
+    <arg name="lrs_frame" />
+    <arg name="grid_size"	/>
+    <arg name="x_min"	/>
+    <arg name="x_max" />
+    <arg name="y_min"	/>
+    <arg name="y_max" />
+
+	<node pkg="pc2_tools" type="pc2_to_grid_image.py" name="pc2_to_grid_image" output="screen">
+		<param name="lrs_pc2_topic"		        value="$(arg lrs_pc2_topic)" />
+        <param name="save_path"				    value="$(arg save_path)" />
+        <param name="lrs_frame"                 value="$(arg lrs_frame)" />
+        <param name="grid_size"					value="$(arg grid_size)" />
+        <param name="x_min"					    value="$(arg x_min)" />
+        <param name="x_max"					    value="$(arg x_max)" />
+        <param name="y_min"					    value="$(arg y_min)" />
+        <param name="y_max"					    value="$(arg y_max)" />
+	</node>
+</launch>

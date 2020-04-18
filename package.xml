@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<package format="2">
+  <name>pc2_tools</name>
+  <version>0.0.0</version>
+  <description>The pc2_tools package</description>
+
+  <maintainer email="maintainer@amoeba.co.jp">maintainer</maintainer>
+
+  <license>TODO</license>
+
+  <!-- <url type="website">http://wiki.ros.org/pc2_tools</url> -->
+
+  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
+
+  <!--   <depend>roscpp</depend> -->
+
+  <!--   <build_depend>roscpp</build_depend> -->
+  <!--   <exec_depend>roscpp</exec_depend> -->
+
+  <!--   <build_depend>message_generation</build_depend> -->
+  <!--   <build_export_depend>message_generation</build_export_depend> -->
+
+  <!--   <buildtool_depend>catkin</buildtool_depend> -->
+
+  <!--   <exec_depend>message_runtime</exec_depend> -->
+
+  <!--   <test_depend>gtest</test_depend> -->
+
+  <!--   <doc_depend>doxygen</doc_depend> -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>pcl_ros</depend>
+  <export></export>
+</package>
