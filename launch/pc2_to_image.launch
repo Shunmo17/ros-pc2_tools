@@ -1,0 +1,13 @@
+<launch>
+	<!-- parameters -->
+  <arg name="ns" />
+	<arg name="input_pc2_topic" />
+	<arg name="output_image_topic" />
+
+	<!-- pcd transformer -->
+  <node pkg="pc2_tools" type="pc2_to_image" name="pc2_to_image_$(arg ns)" output="screen">
+    <param name="input_pc2_topic"       value="$(arg input_pc2_topic)" />
+    <param name="output_image_topic"    value="$(arg output_image_topic)" />
+  </node>
+
+</launch>
