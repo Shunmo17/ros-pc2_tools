@@ -58,8 +58,33 @@ This launch file launches `pc2_transformer.cpp`.
 
 - ns : If you use this node more than one, please use this namespace.
 - input_pc2_topic : input PointCloud2 topic name
-- output_pc2_topic : output PointCLoud2 topic name
+- output_pc2_topic : output PointCloud2 topic name
 - new_frame_id : frame id of transformed PointCloud2 topic
+- 
+
+### src/pc2_to_image.cpp
+
+This node generate Image from PointCoud2 topic .
+
+#### Subscribe
+
+- input PointCloud2 topic : sensor_msgs/PointCloud2
+
+#### Publish
+
+- output Image topic : sensor_msgs/Image
+
+
+
+### launch/pc2_to_image.launch
+
+This launch file launches `pc2_to_image.py`.
+
+#### Parameters
+
+- ns : If you use this node more than one, please use this namespace.
+- input_pc2_topic : input PointCloud2 topic name
+- output_image_topic : output Image topic name
 
 
 
