@@ -14,7 +14,7 @@ class Pc2ToImage():
         self.image_topic = rospy.get_param("~output_image_topic")
 
         # node
-        self.sub_pc2 = rospy.Subscriber(self.pc2_topic, PointCloud2, self.pc2_callback)
+        self.sub_pc2 = rospy.Subscriber(self.pc2_topic, PointCloud2, self.pc2_callback, queue_size=1)
         self.pub_image = rospy.Publisher(self.image_topic, Image, queue_size=1)
     
     def pc2_callback(self, _pc2_msg):

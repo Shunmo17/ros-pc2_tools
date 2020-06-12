@@ -23,7 +23,7 @@ class Pc2ToGrid():
         self.map_size = [rospy.get_param("~x_min"), rospy.get_param("~x_max"), rospy.get_param("~y_min"), rospy.get_param("~y_max")]
 
         # initialize
-        self.sub_obstacle_pc2 = rospy.Subscriber(lrs_pc2_topic, PointCloud2, self.lrs_pc2_handler)
+        self.sub_obstacle_pc2 = rospy.Subscriber(lrs_pc2_topic, PointCloud2, self.lrs_pc2_handler, queue_size=1)
         self.tf_listener = tf.TransformListener()
         self.save_file_index = 0
         self.obstacle_arr = None
